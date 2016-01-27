@@ -15,7 +15,6 @@
 		7E9464801C518F3D00DC4991 /* PitchPleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94647F1C518F3D00DC4991 /* PitchPleaseTests.swift */; };
 		7E94648B1C518F3D00DC4991 /* PitchPleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94648A1C518F3D00DC4991 /* PitchPleaseUITests.swift */; };
 		7E9464991C52FC1800DC4991 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9464981C52FC1800DC4991 /* PlaySoundsViewController.swift */; };
-		7E94649D1C5448EF00DC4991 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E94649C1C5448EF00DC4991 /* movie_quote.mp3 */; };
 		7EAEA78A1C54BEC1003ED9FC /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEA7891C54BEC1003ED9FC /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 		7E94648A1C518F3D00DC4991 /* PitchPleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPleaseUITests.swift; sourceTree = "<group>"; };
 		7E94648C1C518F3D00DC4991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9464981C52FC1800DC4991 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		7E94649C1C5448EF00DC4991 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 		7EAEA7891C54BEC1003ED9FC /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +107,6 @@
 				7E94646E1C518F3D00DC4991 /* Main.storyboard */,
 				7E9464981C52FC1800DC4991 /* PlaySoundsViewController.swift */,
 				7E9464711C518F3D00DC4991 /* Assets.xcassets */,
-				7E94649C1C5448EF00DC4991 /* movie_quote.mp3 */,
 				7E9464731C518F3D00DC4991 /* LaunchScreen.storyboard */,
 				7E9464761C518F3D00DC4991 /* Info.plist */,
 			);
@@ -243,7 +240,6 @@
 			files = (
 				7E9464751C518F3D00DC4991 /* LaunchScreen.storyboard in Resources */,
 				7E9464721C518F3D00DC4991 /* Assets.xcassets in Resources */,
-				7E94649D1C5448EF00DC4991 /* movie_quote.mp3 in Resources */,
 				7E9464701C518F3D00DC4991 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PitchPlease/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheungfamgram.PitchPlease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PitchPlease/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheungfamgram.PitchPlease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
