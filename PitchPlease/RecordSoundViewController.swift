@@ -21,6 +21,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
 
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,32 +31,29 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         recordLabel.hidden = true
-        super.viewDidLoad()
+        recordButton.enabled = true
+        
     }
-    
     
     @IBAction func recordAudio(sender: UIButton) {
         //TODO: record user's voice
-        
-        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentationDirectory, .UserDomainMask, true)[0] as String
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+       
         //save as the same name to not worry about CRUD operations
         let recordingName = "my_audio.wav"
-        let pathArray = [dirPath,  recordingName]
-        let filePath = NSURL.fileURLWithPathComponents(pathArray)
-      
+        let filePath = documentsURL.URLByAppendingPathComponent(recordingName)
         print(filePath)
         print("trying to record")
         
         let session = AVAudioSession.sharedInstance()
         do {
-        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            audioRecorder = try AVAudioRecorder(URL: filePath!, settings: [:])
+            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         } catch _ {
-            print("error, error, ERROR!!!!")
+//            print("error, error, ERROR!!!!")
         }
         try! session.setActive(true)
         
-        try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        audioRecorder = try? AVAudioRecorder(URL: filePath, settings: [:])
         audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true;
         audioRecorder.prepareToRecord()
@@ -74,7 +72,6 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
             recordedAudio.title = recorder.url.lastPathComponent
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
             print("currently recording")
-            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         } else {
             print("recording was unsuccessful")
             recordButton.enabled = true
@@ -83,7 +80,6 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         
         //TODO: step 2 - play and alter the audio in the next segue
     }
-    
     
    
     
