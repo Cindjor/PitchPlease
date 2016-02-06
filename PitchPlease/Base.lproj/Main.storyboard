@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ATo-Tb-8C2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ATo-Tb-8C2">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -38,13 +38,21 @@
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHv-IJ-9RE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rls-Hp-Rks">
+                                <rect key="frame" x="223" y="205" width="154" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="haR-QY-fb8" firstAttribute="centerX" secondItem="Lud-z3-XXE" secondAttribute="centerX" id="5js-Ww-Y5e"/>
+                            <constraint firstItem="Lud-z3-XXE" firstAttribute="top" secondItem="rls-Hp-Rks" secondAttribute="bottom" constant="20" id="6mB-sH-WLO"/>
                             <constraint firstItem="haR-QY-fb8" firstAttribute="top" secondItem="Lud-z3-XXE" secondAttribute="bottom" constant="20" id="9o0-HC-usc"/>
                             <constraint firstItem="Zz1-3J-3xn" firstAttribute="top" secondItem="haR-QY-fb8" secondAttribute="bottom" constant="33" id="ACo-OR-jzY"/>
                             <constraint firstItem="Zz1-3J-3xn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GGk-1j-yFw"/>
+                            <constraint firstItem="rls-Hp-Rks" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZv-u0-CCu"/>
                             <constraint firstItem="Lud-z3-XXE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vw8-oD-coQ"/>
                             <constraint firstItem="haR-QY-fb8" firstAttribute="leading" secondItem="Lud-z3-XXE" secondAttribute="leading" id="exj-bi-NwF"/>
                             <constraint firstItem="Lud-z3-XXE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y3n-0a-qjj"/>
@@ -52,6 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record your voice" id="kWq-oY-5TF"/>
                     <connections>
+                        <outlet property="infoLabel" destination="rls-Hp-Rks" id="GCE-k4-dE2"/>
                         <outlet property="recordButton" destination="Lud-z3-XXE" id="NEE-59-zzn"/>
                         <outlet property="recordLabel" destination="haR-QY-fb8" id="bHf-ml-5Gb"/>
                         <outlet property="stopButton" destination="Zz1-3J-3xn" id="Zho-tR-jUZ"/>
@@ -110,7 +119,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="W2d-Ru-CmV" firstAttribute="top" secondItem="gTA-H2-VC5" secondAttribute="bottom" constant="42" id="0UR-Bv-7zp"/>
                             <constraint firstItem="8WG-bS-aeX" firstAttribute="centerX" secondItem="xyk-Wa-i6d" secondAttribute="centerX" id="Gfv-08-CmZ"/>

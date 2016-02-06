@@ -18,13 +18,6 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
-//            let filePathUrl = NSURL.fileURLWithPath(filePath)
-//            
-//            
-//        } else {
-//            print("the filePath is empty")
-//        }
         audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathURL)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
@@ -38,20 +31,21 @@ class PlaySoundsViewController: UIViewController {
     }
     @IBAction func fastSound(sender: AnyObject) {
         audioPlayer.stop()
-        audioPlayer.rate = 2.3
+        audioPlayer.rate = 3.3
         audioPlayer.play()
+        playAudioWithVariablePitch(0)
     }
     @IBAction func slowSoundPlayback(sender: AnyObject) {
-        //play audio slowly
         audioPlayer.stop()
-        audioPlayer.rate = 0.62
+        audioPlayer.rate = 0.52
         audioPlayer.play()
+        playAudioWithVariablePitch(0)
     }
     @IBAction func playChipmunkAudio(sender: AnyObject) {
-        playAudioWithVariablePitch(1000)
+        playAudioWithVariablePitch(900)
     }
     @IBAction func playVaderAudio(sender: AnyObject) {
-        playAudioWithVariablePitch(-900)
+        playAudioWithVariablePitch(-800)
     }
     
     func playAudioWithVariablePitch(pitch: Float){
